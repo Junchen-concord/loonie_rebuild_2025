@@ -1566,3 +1566,17 @@ Traceback (most recent call last):
   File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
     raise KeyError(key)
 KeyError: 'account_id'
+2025-11-05 15:19:53,732 - ERROR - AccountID: Not Available; ErrorInStep: 1 Loading Json
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_77647/1398699658.py", line 19, in ibvmodel
+    df_ibv = pd.read_json(StringIO(json.dumps(json_temp['Historical_Transactions'])))
+                          ^^^^^^^^
+NameError: name 'StringIO' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_77647/1398699658.py", line 291, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ^^^^^^
+UnboundLocalError: cannot access local variable 'df_ibv' where it is not associated with a value
