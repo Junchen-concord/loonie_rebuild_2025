@@ -1,0 +1,14 @@
+# Local data directories (large JSONs and training data)
+retroData/
+raw_data/
+training_data/
+
+# macOS
+.DS_Store
+
+# Python virtual environments
+.venv/
+venv/
+
+# Interim artifacts
+interim/

@@ -1,0 +1,908 @@
+2025-11-04 15:11:54,296 - ERROR - AccountID: Not Available; ErrorInStep: 3 Feature Generation
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/1624234183.py", line 76, in ibvmodel
+    f2 = df_ibv.groupby(['account_id','Year','Month']).sum()[['IBV_Credit','IBV_Debit']].reset_index()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 3063, in sum
+    result = self._agg_general(
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1839, in _agg_general
+    result = self._cython_agg_general(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1929, in _cython_agg_general
+    new_mgr = data.grouped_reduce(array_func)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 1431, in grouped_reduce
+    applied = blk.apply(func)
+              ^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/internals/blocks.py", line 366, in apply
+    result = func(self.values, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1905, in array_func
+    result = self.grouper._cython_operation(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/ops.py", line 816, in _cython_operation
+    return cy_op.cython_operation(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/ops.py", line 526, in cython_operation
+    return values._groupby_op(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 1637, in _groupby_op
+    raise TypeError(f"datetime64 type does not support {how} operations")
+TypeError: datetime64 type does not support sum operations
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/1624234183.py", line 278, in ibvmodel
+    ndbaccountid = json_temp['NDB']['accountnumber']
+                   ~~~~~~~~~^^^^^^^
+KeyError: 'NDB'
+2025-11-04 15:19:01,269 - ERROR - AccountID: Not Available; ErrorInStep: 3 Feature Generation
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/1624234183.py", line 76, in ibvmodel
+    f2 = df_ibv.groupby(['account_id','Year','Month']).sum()[['IBV_Credit','IBV_Debit']].reset_index()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 3063, in sum
+    result = self._agg_general(
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1839, in _agg_general
+    result = self._cython_agg_general(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1929, in _cython_agg_general
+    new_mgr = data.grouped_reduce(array_func)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 1431, in grouped_reduce
+    applied = blk.apply(func)
+              ^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/internals/blocks.py", line 366, in apply
+    result = func(self.values, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1905, in array_func
+    result = self.grouper._cython_operation(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/ops.py", line 816, in _cython_operation
+    return cy_op.cython_operation(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/ops.py", line 526, in cython_operation
+    return values._groupby_op(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 1637, in _groupby_op
+    raise TypeError(f"datetime64 type does not support {how} operations")
+TypeError: datetime64 type does not support sum operations
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/1624234183.py", line 278, in ibvmodel
+    ndbaccountid = json_temp['NDB']['accountnumber']
+                   ~~~~~~~~~^^^^^^^
+KeyError: 'NDB'
+2025-11-04 15:19:05,692 - ERROR - AccountID: Not Available; ErrorInStep: 3 Feature Generation
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/1624234183.py", line 76, in ibvmodel
+    f2 = df_ibv.groupby(['account_id','Year','Month']).sum()[['IBV_Credit','IBV_Debit']].reset_index()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 3063, in sum
+    result = self._agg_general(
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1839, in _agg_general
+    result = self._cython_agg_general(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1929, in _cython_agg_general
+    new_mgr = data.grouped_reduce(array_func)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 1431, in grouped_reduce
+    applied = blk.apply(func)
+              ^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/internals/blocks.py", line 366, in apply
+    result = func(self.values, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1905, in array_func
+    result = self.grouper._cython_operation(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/ops.py", line 816, in _cython_operation
+    return cy_op.cython_operation(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/ops.py", line 526, in cython_operation
+    return values._groupby_op(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 1637, in _groupby_op
+    raise TypeError(f"datetime64 type does not support {how} operations")
+TypeError: datetime64 type does not support sum operations
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/1624234183.py", line 278, in ibvmodel
+    ndbaccountid = json_temp['NDB']['accountnumber']
+                   ~~~~~~~~~^^^^^^^
+KeyError: 'NDB'
+2025-11-04 15:50:08,510 - ERROR - AccountID: Not Available; ErrorInStep: 1 Loading Json
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/1624234183.py", line 17, in ibvmodel
+    json_temp = json.loads(jsonstr)
+                ^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/.pyenv/versions/3.11.4/lib/python3.11/json/__init__.py", line 339, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not dict
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/1624234183.py", line 277, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ^^^^^^
+UnboundLocalError: cannot access local variable 'df_ibv' where it is not associated with a value
+2025-11-04 15:50:13,669 - ERROR - AccountID: Not Available; ErrorInStep: 1 Loading Json
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/1624234183.py", line 17, in ibvmodel
+    json_temp = json.loads(jsonstr)
+                ^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/.pyenv/versions/3.11.4/lib/python3.11/json/__init__.py", line 339, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not dict
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/1624234183.py", line 277, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ^^^^^^
+UnboundLocalError: cannot access local variable 'df_ibv' where it is not associated with a value
+2025-11-04 15:51:45,338 - ERROR - AccountID: 50633472-43a8-4626-8758-c7cf111cace8; NDBAccount: 60232; ErrorInStep: 3 Feature Generation
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/1624234183.py", line 76, in ibvmodel
+    f2 = df_ibv.groupby(['account_id','Year','Month']).sum()[['IBV_Credit','IBV_Debit']].reset_index()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 3063, in sum
+    result = self._agg_general(
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1839, in _agg_general
+    result = self._cython_agg_general(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1929, in _cython_agg_general
+    new_mgr = data.grouped_reduce(array_func)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 1431, in grouped_reduce
+    applied = blk.apply(func)
+              ^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/internals/blocks.py", line 366, in apply
+    result = func(self.values, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1905, in array_func
+    result = self.grouper._cython_operation(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/ops.py", line 816, in _cython_operation
+    return cy_op.cython_operation(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/ops.py", line 526, in cython_operation
+    return values._groupby_op(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 1637, in _groupby_op
+    raise TypeError(f"datetime64 type does not support {how} operations")
+TypeError: datetime64 type does not support sum operations
+2025-11-04 15:55:00,556 - ERROR - AccountID: 50633472-43a8-4626-8758-c7cf111cace8; NDBAccount: 60232; ErrorInStep: 3 Feature Generation
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/4174280246.py", line 98, in ibvmodel
+    f4 = df_ibv[df_ibv.regularPayroll==1].groupby(['account_id','Year','Month']).sum()['IBV_Credit'].reset_index()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 3063, in sum
+    result = self._agg_general(
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1839, in _agg_general
+    result = self._cython_agg_general(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1929, in _cython_agg_general
+    new_mgr = data.grouped_reduce(array_func)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 1431, in grouped_reduce
+    applied = blk.apply(func)
+              ^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/internals/blocks.py", line 366, in apply
+    result = func(self.values, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1905, in array_func
+    result = self.grouper._cython_operation(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/ops.py", line 816, in _cython_operation
+    return cy_op.cython_operation(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/ops.py", line 526, in cython_operation
+    return values._groupby_op(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 1637, in _groupby_op
+    raise TypeError(f"datetime64 type does not support {how} operations")
+TypeError: datetime64 type does not support sum operations
+2025-11-04 15:56:11,213 - ERROR - AccountID: 50633472-43a8-4626-8758-c7cf111cace8; NDBAccount: 60232; ErrorInStep: 3 Feature Generation
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/549265905.py", line 104, in ibvmodel
+    f5 = df_ibv.groupby(['account_id','Year','Month']).sum()['IBV_Debit'].reset_index()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 3063, in sum
+    result = self._agg_general(
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1839, in _agg_general
+    result = self._cython_agg_general(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1929, in _cython_agg_general
+    new_mgr = data.grouped_reduce(array_func)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 1431, in grouped_reduce
+    applied = blk.apply(func)
+              ^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/internals/blocks.py", line 366, in apply
+    result = func(self.values, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/groupby.py", line 1905, in array_func
+    result = self.grouper._cython_operation(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/ops.py", line 816, in _cython_operation
+    return cy_op.cython_operation(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/groupby/ops.py", line 526, in cython_operation
+    return values._groupby_op(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/arrays/datetimelike.py", line 1637, in _groupby_op
+    raise TypeError(f"datetime64 type does not support {how} operations")
+TypeError: datetime64 type does not support sum operations
+2025-11-04 16:34:13,971 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:34:29,712 - ERROR - AccountID: BmKRZ8xBb1haegjKnZ6MuYbR79EReLcvKVJpn; NDBAccount: 965; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:34:40,007 - ERROR - AccountID: Q9Xx3oewmbUpAqOo7Rm4T3yPOn3OE4H9gN4qJ; NDBAccount: 157; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:35:07,345 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:35:09,840 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:35:46,336 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:35:57,291 - ERROR - AccountID: mNQOLN1EjwsOrXD8jgMkTm4g4p6g1nivOZop6; NDBAccount: 470; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:36:33,850 - ERROR - AccountID: A4RyYr4x6bSqon6k4o7PhO811OQ51YHwNOz1P; NDBAccount: 2675; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:36:52,195 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:36:57,735 - ERROR - AccountID: QA8XpLJmVLtMeLJROmd0CA8BmxdwZMI9AOZJM; NDBAccount: 498; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:37:00,179 - ERROR - AccountID: 3PmQJ4o3Yqsj5X7RP0RaUVzzkwJaZAfzxaMJ9; NDBAccount: 51; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:37:04,576 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:37:40,772 - ERROR - AccountID: yzx7J890g5IvAD9R1ORpu4LkNk6gQOUgAV6BR; NDBAccount: 4397; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:37:46,603 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:38:42,196 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:39:18,503 - ERROR - AccountID: 6kR9J7PZ38Tadxma5N5msexz19km4KuNwLV7N; NDBAccount: 351; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:39:23,069 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:39:46,537 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:40:05,689 - ERROR - AccountID: NNy8q3LdByt88pA99vA1cEkykBg8L6FxJAaEj; NDBAccount: 1511; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:40:31,579 - ERROR - AccountID: 5a9AQbavaXi9ap94jKQ8UX71mKLB40F4qy139; NDBAccount: 147; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:41:01,465 - ERROR - AccountID: OKyLmVeL58fAx0a69Y9rTaYVJBR8naSZkzXn7; NDBAccount: 2405; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:41:51,529 - ERROR - AccountID: MXOEr0y064FNzz9gy8VKFwdM4A7LjKHkadxmy; NDBAccount: 2441; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:42:05,591 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:42:27,240 - ERROR - AccountID: RzN1Yrb7mmhJBqERydmyTPEx6qd1kwt9yK8v6; NDBAccount: 1943; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:42:32,417 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:42:42,675 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:42:57,165 - ERROR - AccountID: 4Ykpb1n7oaFrEb3bXvpxuwxAKD4voBinabpg8; NDBAccount: 287; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:43:12,265 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:44:09,808 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:44:39,653 - ERROR - AccountID: NmqNqEeXY5TeY7kZpkqrtZykeOQjmntOPMj1D; NDBAccount: 5040; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:45:26,679 - ERROR - AccountID: J0wwd7g7Z8s6a1yV7aNLtxQAazE4NDU0mJAYK; NDBAccount: 1142; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:47:15,742 - ERROR - AccountID: 8rRB1dj7ZwFQa8MkwQYbi58qNYRda1FYY18m7; NDBAccount: 350; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:48:17,188 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:48:43,970 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:49:43,629 - ERROR - AccountID: obpgA0PmRZckMg793Xm8uAEomBXdZLhdNeEKE; NDBAccount: 4880; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:49:44,855 - ERROR - AccountID: wzLR3w45ovs7mOQy4RbwCDmoqo7vx6tRk8kxv; NDBAccount: 3074; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:50:03,864 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:51:04,674 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:51:24,491 - ERROR - AccountID: EMjLNePxYwFMXQd7dPMVTQgdOxE66DFdkOxyv; NDBAccount: 3909; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:51:35,125 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
+2025-11-04 16:51:35,842 - ERROR - AccountID: QppLRrOV3DfLwPR7Om0kF330jEnxv4iOR8x9n; NDBAccount: 1977; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:52:11,379 - ERROR - AccountID: znrJaaD109iM890PAvJjHkEjBAvj3Di3PqNjR; NDBAccount: 5036; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:52:20,918 - ERROR - AccountID: MpgE1g01arSAoxJR8MjJfrnewYPMBDH5KbvvX; NDBAccount: 2685; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:52:23,438 - ERROR - AccountID: 3Pxd60PZxQUQKay3nbZpUpr7AVZA33I7PKxV5; NDBAccount: 6224; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:53:21,581 - ERROR - AccountID: aY058nB3PbhjRQVPp4keU5kqz6pA31Sa8Zbjq; NDBAccount: 4406; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:54:06,227 - ERROR - AccountID: nb66ky4Eb8SayRqAYYm9HVb0Emm8qJCjg1z0d; NDBAccount: 758; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 50, in ibvmodel
+    primary_account_info = [i for i in json_temp['Historical_Balance']['report']['items'][0]['accounts']
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'report'
+2025-11-04 16:54:27,906 - ERROR - AccountID: Not Available; ErrorInStep: 2 Data Cleaning
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 23, in ibvmodel
+    df_ibv['IBV_Credit'] = np.where(df_ibv['amount']<0, -1*df_ibv['amount'],0)
+                                    ~~~~~~^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'amount'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/folders/b7/d1qg7gm9009f_cps7l193hch0000gn/T/ipykernel_83719/3998415491.py", line 290, in ibvmodel
+    bankaccountid = df_ibv['account_id'].values[0]
+                    ~~~~~~^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/starsrain/2025_concord/loonie_rebuild_2025/.venv/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 418, in get_loc
+    raise KeyError(key)
+KeyError: 'account_id'
